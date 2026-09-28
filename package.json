@@ -1,0 +1,15 @@
+{
+  "name": "dsh-pi-billion-memory",
+  "version": "1.0.0",
+  "description": "Native DSH long-term summary memory sharing Pi's SQLite index, compatible with billion-context 0.1.166",
+  "type": "module",
+  "main": "./src/host.js",
+  "exports": { ".": "./src/host.js", "./package.json": "./package.json" },
+  "engines": { "node": ">=22.19.0" },
+  "license": "MIT",
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } },
+  "peerDependencies": { "@deepseek-ai/dsh-tools": "*" },
+  "peerDependenciesMeta": { "@deepseek-ai/dsh-tools": { "optional": true } },
+  "scripts": { "test": "node --test test/*.test.mjs", "check": "node --check src/host.js && node --check src/memory-worker.js" },
+  "files": ["src", "vendor", "test", "scripts", "cordis.patch.yml", "README.zh-CN.md", "VERIFICATION.zh-CN.md", "NOTICE.md", "LICENSE"]
+}

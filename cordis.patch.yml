@@ -1,0 +1,6 @@
+- insert:
+    - id: pi-billion-memory-native
+      name: dsh-pi-billion-memory
+      config:
+        scanIntervalSeconds: 60
+        dshEnabled: true
