@@ -27,12 +27,17 @@ dsh plugin --profile web add "C:\absolute\path\to\dsh-pi-billion-memory-1.0.0.tg
 ### 方式 C：从源码获取与安装
 
 ```powershell
+# 1) 克隆并打包
 git clone https://github.com/Juna9969/dsh-pi-billion-memory.git
 cd dsh-pi-billion-memory
 npm pack                     # 生成 dsh-pi-billion-memory-1.0.0.tgz
+
+# 2) 切到目标 profile 目录再安装
+cd "$env:USERPROFILE\.dsh\profiles\<profile>"
+pnpm add "C:\absolute\path\to\dsh-pi-billion-memory-1.0.0.tgz"
 ```
 
-然后在目标 profile 目录执行 `pnpm add "<tgz 绝对路径>"`，并确认该 profile 的 `package.json` 中 `dsh.profile.bundles` 列表包含 `dsh-pi-billion-memory`。
+并确认该 profile 的 `package.json` 中 `dsh.profile.bundles` 列表包含 `dsh-pi-billion-memory`。
 
 ### 首次写入前先备份
 
