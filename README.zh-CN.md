@@ -1,6 +1,6 @@
 # Pi Billion Memory · DeepSeek Harness 原生版
 
-**1.0.0** · 移植自 [pi-billion-memory 0.5.3](https://github.com/tjp72/pi-billion-memory)，针对 Harness **0.1.7-rc.2** / **billion-context 0.1.166** 的原生持久化格式适配。
+**1.0.1** · 移植自 [pi-billion-memory 0.5.3](https://github.com/tjp72/pi-billion-memory)，针对 Harness **0.1.7-rc.2** / **billion-context 0.1.166** 的原生持久化格式适配。
 
 把 **Pi / OpenCode ACP / DSH billion-context 的压缩摘要**放入同一个本地 SQLite 记忆索引。不是把 Pi 扩展直接塞进 Harness，也不是完整会话搜索器。
 
@@ -116,7 +116,7 @@
    目标必须不存在，且脚本不会输出摘要。备份仍包含全部私人记忆，请放在受限本地目录，勿上传或混入发行包。
 2. Desktop 从 Harness 插件管理入口安装本地发行 `.tgz` 的**绝对路径**，启用 `dsh-pi-billion-memory` 组合包。不要执行 `dsh plugin --profile desktop ...`，Desktop profile 由 Electron 管理。
 3. 在**原来的 Harness 页面**刷新工具/命令列表；无需替换 Web 服务。先 `/memory sources`、`/memory status`，确认根目录和权限；需要写入时再执行 `/memory scan`。
-4. 独立 CLI 管理的 Web profile 可用 `dsh plugin --profile web add "C:\path\dsh-pi-billion-memory-1.0.0.tgz"`。不要为了本插件启动第二个 GUI。
+4. 独立 CLI 管理的 Web profile 可用 `dsh plugin --profile web add "C:\path\dsh-pi-billion-memory-1.0.1.tgz"`。不要为了本插件启动第二个 GUI。
 
 停用：在插件管理中关闭此组合包。取消未完成扫描并关闭 worker 后，共享数据保留，Pi 继续可用。卸载只移除这个包/组合包，**不要删除整个 `.pi`，不要恢复旧的整个 profile manifest**。更换同名 Host 源码版本可能受到模块缓存影响，必要时等现有任务结束再重启，而非重启正在工作的 Host。
 

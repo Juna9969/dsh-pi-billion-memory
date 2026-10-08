@@ -10,7 +10,7 @@ DeepSeek Harness 原生插件：把 **Pi / OpenCode ACP / DSH billion-context �
 
 ### 方式 A：Harness 插件管理入口（Desktop，推荐）
 
-1. 获取安装包：下载 [Releases](https://github.com/Juna9969/dsh-pi-billion-memory/releases) 中的 `dsh-pi-billion-memory-1.0.0.tgz`，或按方式 C 从源码打包。
+1. 获取安装包：下载 [Releases](https://github.com/Juna9969/dsh-pi-billion-memory/releases) 中的 `dsh-pi-billion-memory-1.0.1.tgz`，或按方式 C 从源码打包。
 2. 在 Harness 的「插件」管理入口选择从本地 `.tgz` 安装，填写该文件的**绝对路径**。
 3. 启用 `dsh-pi-billion-memory` 组合包，刷新**原来的** Harness 页面。
 
@@ -19,7 +19,7 @@ DeepSeek Harness 原生插件：把 **Pi / OpenCode ACP / DSH billion-context �
 ### 方式 B：独立 CLI 管理的 Web profile
 
 ```powershell
-dsh plugin --profile web add "C:\absolute\path\to\dsh-pi-billion-memory-1.0.0.tgz"
+dsh plugin --profile web add "C:\absolute\path\to\dsh-pi-billion-memory-1.0.1.tgz"
 ```
 
 将 `web` 换成实际的 profile 名称，**不要替换为 `desktop`**。
@@ -30,11 +30,11 @@ dsh plugin --profile web add "C:\absolute\path\to\dsh-pi-billion-memory-1.0.0.tg
 # 1) 克隆并打包
 git clone https://github.com/Juna9969/dsh-pi-billion-memory.git
 cd dsh-pi-billion-memory
-npm pack                     # 生成 dsh-pi-billion-memory-1.0.0.tgz
+npm pack                     # 生成 dsh-pi-billion-memory-1.0.1.tgz
 
 # 2) 切到目标 profile 目录再安装
 cd "$env:USERPROFILE\.dsh\profiles\<profile>"
-pnpm add "C:\absolute\path\to\dsh-pi-billion-memory-1.0.0.tgz"
+pnpm add "C:\absolute\path\to\dsh-pi-billion-memory-1.0.1.tgz"
 ```
 
 并确认该 profile 的 `package.json` 中 `dsh.profile.bundles` 列表包含 `dsh-pi-billion-memory`。

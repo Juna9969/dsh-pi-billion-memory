@@ -1,6 +1,6 @@
 {
   "name": "dsh-pi-billion-memory",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Native DSH long-term summary memory sharing Pi's SQLite index, compatible with billion-context 0.1.166",
   "type": "module",
   "main": "./src/host.js",

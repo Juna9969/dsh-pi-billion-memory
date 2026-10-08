@@ -43,7 +43,7 @@ profile 内其他依赖、bundle 与 patch 条目均未改动。
 
 ## 安装包与已安装副本一致性
 
-从发行包 `dsh-pi-billion-memory-1.0.0.tgz` 解出 25 个文件与已安装目录逐文件比对：
+从发行包 `dsh-pi-billion-memory-1.0.0.tgz`（`1.0.1` 仅补 README.md，包内容一致）解出 25 个文件与已安装目录逐文件比对：
 
 | 结果 | 数量 |
 | --- | ---: |
